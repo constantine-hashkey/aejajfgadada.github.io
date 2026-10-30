@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Coldblooded | Deface</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; user-select: none; }
+        body, html {
+            width: 100%; height: 100%;
+            background: #000 url('https://r2.fivemanage.com/JHxV3DCDPHqeJJ4ZqeVOv/egor-komarov-vpWRUwL39FQ-unsplash.png') no-repeat center center;
+            background-size: cover; overflow: hidden;
+            font-family: 'Segoe UI', Tahoma, sans-serif; color: #fff;
+        }
+
+        .layout-wrapper { 
+            position: relative; 
+            width: 100vw; 
+            height: 100vh; 
+            display: flex; 
+            flex-direction: column; 
+            justify-content: center; 
+            align-items: center;    
+            padding: 40px; 
+            z-index: 2; 
+        }
+
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 15px; 
+        }
+
+
+        .header-section { 
+            margin-bottom: 10px; 
+            margin-top: -30px;
+        }
+        .main-title { 
+            font-size: 35px; 
+            font-weight: 900; 
+            text-transform: uppercase; 
+            letter-spacing: 5px; 
+            line-height: 1.1;
+            color: #ffffff;
+            /* Ang glow ay dito lang sa top text */
+            text-shadow: 0 0 15px rgba(249, 166, 0, 0.8), 0 0 30px rgba(255, 157, 0, 0.937);
+        }
+
+        .red-header { 
+            color: #ffcc00; 
+            text-shadow: none !important; 
+            display: inline-block; /* Para gumana ang margin */
+            margin-top: 25px; /* Dinagdagan ang agwat bago ito */
+        }
+
+
+        .logo-box { display: flex; flex-direction: column; align-items: center; margin-bottom: 5px; }
+        .logo-box img { 
+            width: 450px; 
+            height: auto; 
+            filter: drop-shadow(0 0 15px rgba(252, 177, 0, 0.8));
+        }
+        
+        .name-section { margin-top: -15px; }
+        .sub-name { 
+            font-size: 25px; 
+            font-weight: bold; 
+            text-transform: uppercase; 
+            letter-spacing: 1px; 
+            color: #ffffff;
+            text-shadow: 0 0 10px #f5b400, 0 0 20px #ffbb00;
+        }
+        
+        .rev-text { font-size: 18px; color: #eeb405; letter-spacing: 2px; font-weight: 600; margin-top: 5px; }
+
+
+        .timer-container {
+            margin-top: 10px;
+            padding: 8px 30px;
+            background: rgba(0, 0, 0, 0.6);
+            border: 2px solid #ff9d00;
+            border-radius: 50px;
+        }
+
+        #phClock {
+            font-family: 'Consolas', monospace;
+            font-size: 18px;
+            font-weight: bold;
+            letter-spacing: 4px;
+            color: #fff;
+        }
+        #phClock span { color: #ffa600; } 
+
+
+        .info-container { 
+            display: flex; 
+            flex-direction: column; 
+            gap: 5px; 
+            width: 90vw; 
+            max-width: 900px; 
+            margin-top: 20px;
+            padding: 15px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.3);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+            text-align: center;
+        }
+
+        .info-line {
+            font-family: 'Segoe UI', sans-serif;
+            font-size: 9px;
+            font-weight: 800;
+            color: #ffaa00;
+            letter-spacing: 0.5px;
+        }
+
+        .info-line span { color: #ff9900; }
+
+        .footer-list { 
+            position: fixed; 
+            bottom: 24px; 
+            left: 0;
+            width: 100%; 
+            border-top: 1px solid #ff9d00; /* Solid Red Line Taas */
+            border-bottom: 1px solid #ff9d00; /* Solid Red Line Baba */
+            padding: 8px 0; 
+            background: #000; /* Pure Black Background */
+            overflow: hidden; 
+            white-space: nowrap;
+            z-index: 5;
+        }
+        .marquee-content {
+            display: inline-block;
+            padding-left: 100%;
+            animation: marquee 30s linear infinite;
+            font-size: 15px; 
+            font-weight: 800; 
+            color: #ff6f00;
+            text-transform: uppercase;
+        }
+        .marquee-content span { color: #fff; margin-right: 15px; }
+
+        @keyframes marquee {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(-100%, 0); }
+        }
+
+        .bottom-signature {
+            position: absolute; bottom: 10px; left: 50%;
+            transform: translateX(-50%); font-size: 10px;
+            color: #555; letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+        
+        #defaceVideo { position: absolute; top: 0; left: 0; width: 1px; height: 1px; opacity: 0.01; }
+    </style>
+</head>
+<body oncontextmenu="return false;">
+
+    <video id="defaceVideo" preload="auto" loop>
+        <source src="https://files.catbox.moe/mavrm7.mp4" type="video/mp4">
+    </video>
+
+    <div class="layout-wrapper">
+        <div class="main-content">
+            <div class="header-section">
+                <h1 class="main-title">THIS SERVER HAS BEEN DEFACED BY <br> <span class="red-header">Coldblooded</span></h1>
+            </div>
+
+            <div class="logo-box">
+                <img src="https://www.image2url.com/r2/default/images/1793384190600-467f8132-51f7-47f6-8d08-4ca8c805d3e5.png" alt="Logo">
+            </div>
+
+            <div class="name-section">
+                <div class="sub-name">Coldblooded.cons</div>
+                <div class="rev-text">Aint Reppin anything NIGGA</div>
+            </div>
+
+            <div class="timer-container">
+                <div id="phClock">00<span>:</span>00<span>:</span>00</div>
+            </div>
+
+            <div class="info-container">
+                <div class="info-line">
+                    User-Agent : <span>Mozilla/5.0 (FiveM Client; Win64; x64)</span>
+                </div>
+                <div class="info-line">
+                    IP : 192.168.100.1<span></span>
+                </div>
+                <div class="info-line">
+                    Execution Time : <span>0.0000001337 seconds</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-list">
+            <div class="marquee-content">
+                <span>Coldblooded ||</span>
+                CONSTANTINE - SHXYY - NOKI - HEV - TRON - XERA - MCLO - KLWI - JAZZ - MCLO - WILL - AKI - KWATRO - ANGEL - MON - Z - PRIMO - CALIX
+            </div>
+        </div>
+
+        <div class="bottom-signature">
+            © <span style="color:#ff0000">Coldblooded</span> || DEFACE WORLDWIDE
+        </div>
+    </div>
+
+    <script>
+        function updateClock() {
+            const now = new Date();
+            const phTime = new Intl.DateTimeFormat('en-US', {
+                timeZone: 'Asia/Manila',
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit',
+                hour12: false
+            }).formatToParts(now);
+
+            let h = phTime.find(p => p.type === 'hour').value;
+            let m = phTime.find(p => p.type === 'minute').value;
+            let s = phTime.find(p => p.type === 'second').value;
+
+            document.getElementById('phClock').innerHTML = `${h}<span>:</span>${m}<span>:</span>${s}`;
+        }
+        setInterval(updateClock, 1000);
+        updateClock();
+
+        const v = document.getElementById("defaceVideo");
+        v.volume = 1.0; 
+
+        function attemptPlay() {
+            v.play().then(() => {
+                cleanup();
+            }).catch(err => {});
+        }
+
+        function cleanup() {
+            window.removeEventListener('mousemove', attemptPlay);
+            window.removeEventListener('mousedown', attemptPlay);
+            window.removeEventListener('keydown', attemptPlay);
+        }
+
+        window.addEventListener('mousemove', attemptPlay);
+        window.addEventListener('mousedown', attemptPlay);
+        window.addEventListener('keydown', attemptPlay);
+        window.onload = attemptPlay;
+        v.muted = false;
+    </script>
+</body>
+</html>
